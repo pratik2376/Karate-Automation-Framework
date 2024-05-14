@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+// ext {
+//     karateVesion = '1.4.0'
+//     java8 = JavaVersion.current().isJava8()
+// }
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "com.intuit.karate:karate-junit5:1.4.0"
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    implementation group: 'net.masterthought', name: 'cucumber-reporting', version: '5.7.2'
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.11'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+    // outputs.upTodateWhen(false)
+    minHeapSize="512m"
+    maxHeapSize="4G"
+}
+
+sourceSets {
+    test{
+        resources{
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}

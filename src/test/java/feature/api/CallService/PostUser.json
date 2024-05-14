@@ -1,0 +1,4 @@
+{
+    "name": "#(karate.get('__arg.name','sample'))",
+    "job": "#(karate.get('__arg.job','test'))"
+}

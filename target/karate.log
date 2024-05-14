@@ -1,0 +1,19 @@
+21:53:15.210 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @Test
+21:53:15.399 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.env': dev
+21:53:21.603 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:feature/data/DEV_DATA.feature
+21:53:21.669 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:feature/data/DEV_DATA.feature
+21:53:21.997 [pool-1-thread-1] INFO  com.intuit.karate - [print] Sample 
+21:53:22.013 [pool-1-thread-1] INFO  c.intuit.karate.core.FeatureRuntime - classpath:feature/api/SmsService/GetUserApi.feature - call by tag at line 10: GetUsers
+21:53:22.638 [pool-1-thread-1] ERROR com.intuit.karate - java.net.UnknownHostException: No such host is known (reqres.inter), http call failed after 572 milliseconds for url: https://reqres.inter/users?page=4
+21:53:22.661 [pool-1-thread-1] ERROR com.intuit.karate - classpath:feature/api/SmsService/GetUserApi.feature:12
+When method GET
+http call failed after 572 milliseconds for url: https://reqres.inter/users?page=4
+java.net.UnknownHostException: No such host is known (reqres.inter)
+classpath:feature/api/SmsService/GetUserApi.feature:12
+21:53:22.662 [pool-1-thread-1] ERROR com.intuit.karate - classpath:feature/sms/test/smsTest.feature:22
+When call read(ENDPOINTS.SMS+'@GetUsers') args
+http call failed after 572 milliseconds for url: https://reqres.inter/users?page=4
+java.net.UnknownHostException: No such host is known (reqres.inter)
+classpath:feature/api/SmsService/GetUserApi.feature:12
+classpath:feature/sms/test/smsTest.feature:22
+21:53:24.848 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 8 of 8 (0 remaining) classpath:feature/sms/test/smsTest.feature
