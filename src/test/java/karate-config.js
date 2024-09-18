@@ -19,7 +19,10 @@ function fn() {
 
         ENDPOINTS: {
             CALL: 'classpath:feature/api/CallService/PostUserApi.feature',
-            SMS: 'classpath:feature/api/SmsService/GetUserApi.feature'
+            SMS: 'classpath:feature/api/SmsService/GetUserApi.feature',
+            USER: 'classpath:feature/api/UserService/PutUserApi.feature',
+            BOT:  'classpath:feature/api/BotService/PatchUserApi.feature',
+            VOICE: 'classpath:feature/api/VoiceService/DeleteUserApi.feature'
         },
 
         //Database scripts
@@ -43,6 +46,18 @@ function fn() {
             SMS: {
                 url: 'https://reqres.in/api/',
                 authorizationToken: 'tbd'
+            },
+            USER: {
+                url: 'https://reqres.in/api/',
+                authorizationToken: 'tbd'
+            },
+            BOT: {
+                url: 'https://reqres.in/api/',
+                authorizationToken: 'tbd'
+            },
+            VOICE: {
+                url: 'https://reqres.in/api/',
+                authorizationToken: 'tbd'
             }
         };
         
@@ -60,6 +75,18 @@ function fn() {
             },
             SMS: {
                 url: 'https://reqres.inter/',
+                authorizationToken: 'tbd'
+            },
+            USER: {
+                url: 'https://reqres.in/api/',
+                authorizationToken: 'tbd'
+            },
+            BOT: {
+                url: 'https://reqres.in/api/',
+                authorizationToken: 'tbd'
+            },
+            VOICE: {
+                url: 'https://reqres.in/api/',
                 authorizationToken: 'tbd'
             }
         };

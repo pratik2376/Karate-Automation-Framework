@@ -15,7 +15,7 @@ Background:
 * def TestData = DATA.CustomerDetails[index].Name
 
 @Test
-Scenario: verify whether user is user list based on page number
+Scenario: verify whether user is able to get list based on page number
 * args.pageNumber = '4'
 * print TestData
 
